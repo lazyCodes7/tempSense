@@ -1,5 +1,5 @@
-# tempSense
-## What does it do ??
+# tempSense :umbrella:
+## What does it do :ear:
 Basically, tempSense is a Telegram Bot that can get us the temperature(in Celsius or Fahreneit),humidity when we ask for it. You can ask this bot whether it's a good time to dry out clothes and it will also send notifications if it starts raining and will caution you to remove clothes if such an event happens. This is my first ever IoT project and I have only started to explore this field and there is a lot more to learn as of now. So this project is simple but useful as well.
 
 ## Components Used
@@ -11,7 +11,7 @@ Basically, tempSense is a Telegram Bot that can get us the temperature(in Celsiu
   <li>B-Type USB Cable</li>
 </ul>
   
-## Third Party Libraries
+## Third Party Libraries:key:
 <ul>
   <li><a href="https://github.com/bblanchon/ArduinoJson">Arduino Json</a></li>
   <li><a href="https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot">Universal Telegram Bot</a></li>
