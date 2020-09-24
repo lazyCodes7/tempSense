@@ -2,8 +2,8 @@
 #include "DHT.h" 
 #include <UniversalTelegramBot.h>                       
 #define DHTTYPE DHT11   // DHT 11
-#define BOTtoken "xxxxxxxxxxxxxxxxx"  // your Bot Token (Get from Botfather)
-#define dht_dpin 0
+#define BOTtoken "805296335:AAHKjVOL4Zndzmcg6t24_piorcb-121JIqk"  // your Bot Token (Get from Botfather)
+#define dht_dpin 2
 String chat_id;
 char ssid[] = "Redmixc";              // your network SSID (name)
 char password[] = "spaces3235";   // your network key
@@ -77,7 +77,7 @@ void handleNewMessages(int numNewMessages) {
   }
 }
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   dht.begin();
   // Set WiFi to station mode and disconnect from an AP if it was Previously connected
   WiFi.mode(WIFI_STA);
