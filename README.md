@@ -13,8 +13,12 @@ Basically, tempSense is a Telegram Bot that can get us the temperature(in Celsiu
   
 ### How was it built?
 I tried two approaches for building the bot. 
-<ul>
-  <li>[!](Using telegram bot libraries for nodeMCU and also collecting the sensor values as well)</li>
-  <li>[](Collecting sensor values and posting it to a webserver hosted using nodeMCU and also building a server for telegram using node.js which will get these values from the esp webserver)</li>
+- [!](Using telegram bot libraries for nodeMCU and also collecting the sensor values as well)
+- [](Collecting sensor values and posting it to a webserver hosted using nodeMCU and also building a server for telegram using node.js which will get these values from the esp webserver)
 </ul>
-   
+### Approx Cost ###
+- DHT 11 sensor - 100-200 Rs
+- Rain Sensor - 100-200 Rs
+- NodeMCU with ESP8266-12E module - 300-400 Rs
+- Jumper Cables(bulk)- 100-200 Rs
+- USB B-Type Cable - 300-400 Rs(you can use your charging cable as well if you have B-Type Cable
