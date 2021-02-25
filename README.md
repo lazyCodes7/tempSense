@@ -24,3 +24,5 @@ I tried two approaches for building the bot.
   <li>Jumper Cables(bulk)- 100-200 Rs</li>
   <li>USB B-Type Cable - 300-400 Rs(you can use your charging cable as well if you have B-Type Cable</li>
   </ul>
+<h3>Screenshot</h3>
+<img src="https://user-images.githubusercontent.com/53506835/90505384-26194b00-e170-11ea-8c1d-0a05434e9ae7.jpg" width=50%>
