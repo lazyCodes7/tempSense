@@ -1,7 +1,5 @@
 ## Approach 1 (Faster) ##
-In this approach the connection is all the same which can be viewed in the repo's main readme. \
-Main difference is in the approach.\
-
+### nodeMCU part ###
 - Reading sensor values
 ``` C++
 void loop() {
@@ -62,3 +60,4 @@ String createJsonResponse() {
   return json;
 }
 ```
+### Telegram part ###
