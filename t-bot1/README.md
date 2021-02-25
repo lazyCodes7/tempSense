@@ -61,3 +61,41 @@ String createJsonResponse() {
 }
 ```
 ### Telegram part ###
+- Used BotFather for getting bot token
+- Imported all the things required and saved token in .env file
+``` js
+const TelegramBot = require('node-telegram-bot-api'); // using node-telegram-bot-api library
+const fetch = require('node-fetch');  
+const token = process.env.TOKEN; // Telegram token recieved from BotFather
+const request = require('request');
+var json;
+let settings = { method: "Get" };
+// Created instance of TelegramBot 
+const bot = new TelegramBot(token, {
+    polling: true
+});
+```
+- Do something based on command recieved and send text to the user
+``` js
+bot.onText(/\/getTempf/,(msg,match) => {
+  const chatId = msg.chat.id;
+  let url = "http://192.168.43.181/temp.json"; // getting values in json format from the temp.json end
+  let options = {json: true};
+  request(url, options, (error, res, body) => {
+    if (error) {
+        return  console.log(error)
+    };
+
+    if (!error && res.statusCode == 200) {
+        // do something with JSON, using the 'body' variable
+        json = res.body;
+        JSON.stringify(json); // converting in string format
+        console.log(res.body);
+    };
+    var msg = "Current temperature in fahreneit is "
+    msg+= JSON.parse(json.tempF); //parsing the json output recieved
+    msg+= "F."
+    bot.sendMessage(chatId,msg); //send message
+  });
+});
+```
