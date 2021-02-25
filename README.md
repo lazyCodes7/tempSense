@@ -13,8 +13,8 @@ Basically, tempSense is a Telegram Bot that can get us the temperature(in Celsiu
   
 ### How was it built?
 I tried two approaches for building the bot. 
-- [!](Using telegram bot libraries for nodeMCU and also collecting the sensor values as well)
-- [](Collecting sensor values and posting it to a webserver hosted using nodeMCU and also building a server for telegram using node.js which will get these values from the esp webserver)
+- [Using telegram bot libraries for nodeMCU and also collecting the sensor values as well](https://github.com/lazyCodes7/tempSense/tree/master/t-bot2)
+- [Collecting sensor values and posting it to a webserver hosted using nodeMCU and also building a server for telegram using node.js which will get these values from the esp webserver](https://github.com/lazyCodes7/tempSense/tree/master/t-bot1)
 
 <h3>Approx Cost</h3>
   <ul>
