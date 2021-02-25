@@ -1,4 +1,4 @@
-### Approach 2 (Slower) ###
+### Approach 2 (Slower)🐫🐫 ###
 In this approach everything from collecting sensor values and responding to user-texts is handled in one file. It was my inital approach when working on this project but response time was around 10-15 secs hence the 1st approach
 - Establishing a connection
 ``` C++
@@ -61,10 +61,10 @@ float t = dht.readTemperature();
 float h = dht.readHumidity();
 float f=dht.readTemperature(true);
 ```
-### Extras ###
+### Extras 👩‍👩‍👦‍👦###
 - ESP Wifi
 - UniversalTelegramBot
 - DHT
 
-### Learn more about UniversalTelegramBot and it's functions here ###
+### Learn more about UniversalTelegramBot and it's functions here 👁👁###
 [Checkout README for the functions](https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot)
