@@ -61,7 +61,7 @@ float t = dht.readTemperature();
 float h = dht.readHumidity();
 float f=dht.readTemperature(true);
 ```
-### Extras 👩‍👩‍👦‍👦###
+### Extras 👩‍👩‍👦‍👦 ###
 - ESP Wifi
 - UniversalTelegramBot
 - DHT
