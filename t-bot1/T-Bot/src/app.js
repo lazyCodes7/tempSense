@@ -1,19 +1,19 @@
 require('dotenv').config();
-const TelegramBot = require('node-telegram-bot-api');
-const fetch = require('node-fetch');
-const token = process.env.TOKEN;
+const TelegramBot = require('node-telegram-bot-api'); // using node-telegram-bot-api library
+const fetch = require('node-fetch');  
+const token = process.env.TOKEN; // Telegram token recieved from BotFather
 const request = require('request');
 var json;
 let settings = { method: "Get" };
-// Created instance of TelegramBot
+// Created instance of TelegramBot 
 const bot = new TelegramBot(token, {
     polling: true
 });
 
-
+// When text matches getTempf invoke this 
 bot.onText(/\/getTempf/,(msg,match) => {
   const chatId = msg.chat.id;
-  let url = "http://192.168.43.181/temp.json";
+  let url = "http://192.168.43.181/temp.json"; // getting values in json format from the temp.json end
   let options = {json: true};
   request(url, options, (error, res, body) => {
     if (error) {
@@ -23,16 +23,17 @@ bot.onText(/\/getTempf/,(msg,match) => {
     if (!error && res.statusCode == 200) {
         // do something with JSON, using the 'body' variable
         json = res.body;
-        JSON.stringify(json);
+        JSON.stringify(json); // converting in string format
         console.log(res.body);
     };
     var msg = "Current temperature in fahreneit is "
-    msg+= JSON.parse(json.tempF);
+    msg+= JSON.parse(json.tempF); //parsing the json output recieved
     msg+= "F."
-    bot.sendMessage(chatId,msg);
+    bot.sendMessage(chatId,msg); //send message
   });
 });
 
+// when command is /getTemp
 bot.onText(/\/getTemp/,(msg,match) => {
   const chatId = msg.chat.id;
   let url = "http://192.168.43.181/temp.json";
@@ -54,13 +55,14 @@ bot.onText(/\/getTemp/,(msg,match) => {
     });
 });
 
+// when command is /getHumidity
 bot.onText(/\/getHumidity/,(msg,match) => {
   const chatId = msg.chat.id;
   let url = "http://192.168.43.181/temp.json";
   let options = {json: true};
   request(url, options, (error, res, body) => {
       if (error) {
-          return  console.log(error)
+          return  console.log(error) // if error is recieved print the error in console
       };
       if (!error && res.statusCode == 200) {
           // do something with JSON, using the 'body' variable
@@ -78,7 +80,7 @@ bot.onText(/\/getHumidity/,(msg,match) => {
 bot.onText(/\/keyboard/, (msg) => {
     bot.sendMessage(msg.chat.id, 'Alternative keybaord layout', {
         'reply_markup': {
-            'keyboard': [['\/getTempF', '\/getTempC'], ['\/getHumidity'], ['\/start']],
+            'keyboard': [['\/getTempF', '\/getTempC'], ['\/getHumidity'], ['\/start']], //inline keyboard
             resize_keyboard: true,
             one_time_keyboard: true,
             force_reply: true,
@@ -86,6 +88,7 @@ bot.onText(/\/keyboard/, (msg) => {
     });
 });
 
+// /status which sends overall status of the room
 bot.onText(/\/status/,(msg,match) => {
   const chatId = msg.chat.id;
   let url = "http://192.168.43.181/temp.json";
@@ -103,6 +106,7 @@ bot.onText(/\/status/,(msg,match) => {
       };
       var msg = "Current Temperature of the room is "
       if(JSON.parse(json.humidity)>70){
+        // sending a message based on humidity measured
         var msgx = "It sure really is sweaty. Make sure to turn on your fan and have a cool drink or two eh?";
         bot.sendMessage(chatId,msgx);
         msgx = "Please charge me too will you?";
@@ -119,7 +123,9 @@ bot.onText(/\/status/,(msg,match) => {
     });
 });
 
+// /start for starting the bot
 bot.onText(/\/start/, (msg) => {
+  // welcome message
   var welcome = "Welcome to tempAssist, " + msg.chat.username +".\n";
      welcome += "You can detect your room's temperature,humidity and it will also send you notifications if it's raining.\n\n";
      welcome += "/getTemp : for getting the temperature value in your room\n";
