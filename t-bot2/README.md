@@ -66,5 +66,5 @@ float f=dht.readTemperature(true);
 - UniversalTelegramBot
 - DHT
 
-### Learn more about UniversalTelegramBot and it's functions here 👁👁###
+### Learn more about UniversalTelegramBot and it's functions here 👁👁 ###
 [Checkout README for the functions](https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot)
