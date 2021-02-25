@@ -1,5 +1,5 @@
-## Approach 1 (Faster) ##
-### nodeMCU part ###
+## Approach 1 (Faster)✈✈ ##
+### nodeMCU part 🛴 ###
 - Reading sensor values
 ``` C++
 void loop() {
@@ -60,7 +60,7 @@ String createJsonResponse() {
   return json;
 }
 ```
-### Telegram part ###
+### Telegram part 🦋 ###
 - Used BotFather for getting bot token
 - Imported all the things required and saved token in .env file
 ``` js
@@ -106,5 +106,5 @@ bot.onText(/\/getTempf/,(msg,match) => {
 - ESP Webserver
 - ESP Wifi
 
-### Learn about hosting telegram bot ###
+### Learn about hosting telegram bot 🚞 ###
 [Different libraries than the one I am using but inital steps for creating bot in Telegram app are useful!](https://dev.to/ajaykumbhare/build-a-telegram-bot-using-node-js-171h)
