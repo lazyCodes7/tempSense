@@ -61,3 +61,10 @@ float t = dht.readTemperature();
 float h = dht.readHumidity();
 float f=dht.readTemperature(true);
 ```
+### Extras ###
+- ESP Wifi
+- UniversalTelegramBot
+- DHT
+
+### Learn more about UniversalTelegramBot and it's functions here ###
+[Checkout README for the functions](https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot)
