@@ -1,7 +1,7 @@
 {
   "name": "telegram-bot-sitepoint",
   "version": "1.0.0",
-  "description": "Telegram bot for labelling articles",
+  "description": "telegram bot for weather data",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
@@ -12,7 +12,7 @@
     "Node.js",
     "Javascript"
   ],
-  "author": "Michiel Mulders",
+  "author": "Rishab Mudliar",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
